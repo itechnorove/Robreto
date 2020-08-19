@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-buttons slot="start">
+<ion-back-button></ion-back-button>
+</ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+<h3 style="font-size: 23px;font-weight: 700">Login</h3><br>
+
+<form #form="ngForm" (ngSubmit)="login(form.value)">
+
+  <ion-list>
+    <ion-radio-group >
+      <ion-list-header>
+        <ion-label>
+         Select Language
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label><img src="../../../assets/en.webp" style="width: 50px;"> <span style="margin-left:20px;">England</span></ion-label>
+        <ion-radio slot="start" value="en" ></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label><img src="../../../assets/fr.svg" style="width: 50px;"><span style="margin-left:20px;">France</span> </ion-label>
+          <ion-radio slot="start" value="fr" ></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label><img src="../../../assets/Flag_of_Italy.svg" style="width: 50px;"> <span style="margin-left:20px;">Itlay</span></ion-label>
+            <ion-radio slot="start" value="it" ></ion-radio>
+            </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="mail"></ion-icon> Email</ion-label>
+  <ion-input type="email" ngModel required name="email"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="lock-closed-outline"></ion-icon> Password</ion-label>
+  <ion-input type="password" ngModel required name="password"></ion-input>
+</ion-item>
+
+<br><br>
+<ion-button expand="block" mode="ios" type="submit">Login</ion-button>
+<p align="center">Forgot Password ? <a routerLink="/forgot" routerDirection="forward">Click here to reset it!</a></p>
+</form>
+
+<br><br>
+<ion-button fill="outline" expand="block" mode="ios" routerLink="/signup" routerDirection="forward">Signup</ion-button>
+
+
+</ion-content>

@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar >
+  <ion-buttons>
+<ion-back-button></ion-back-button>
+</ion-buttons>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <form #form="ngForm" (ngSubmit)="signup(form.value)">
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input name="nome" required ngModel></ion-input>
+        </ion-item>
+      </ion-col>
+   
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input name="cognome" required ngModel></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input  type="email" name="email" ngModel></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label>Country</ion-label>
+          <ion-select placeholder="Select One" name="provincia" ngModel>
+            <ion-select-option value="italy">Italy</ion-select-option>
+            <ion-select-option value="france">France</ion-select-option>
+            <ion-select-option value="france">England</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input name="password1" type="password" ngModel ></ion-input>
+          <!-- <ion-input type="password" *ngIf="!showPwd" [(ngModel)]="name"></ion-input>
+          <button icon-only ion-button clear type="button" item-right (click)="showPwd=!showPwd">
+            <ion-icon *ngIf="showPwd" name="eye"></ion-icon>
+            <ion-icon *ngIf="!showPwd" name="eye-off"></ion-icon> 
+          </button>-->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input name="password2" type="password" ngModel></ion-input>
+          <!-- <ion-input type="password" *ngIf="!showPwd" [(ngModel)]="name"></ion-input>
+          <button icon-only ion-button clear type="button" item-right (click)="showPwd=!showPwd">
+            <ion-icon *ngIf="showPwd" name="eye"></ion-icon>
+            <ion-icon *ngIf="!showPwd" name="eye-off"></ion-icon>
+          </button> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <ion-item>
+          <ion-label>Country</ion-label>
+          <ion-select placeholder="Select One" name="provincia" ngModel>
+            <ion-select-option value="italy">Italy</ion-select-option>
+            <ion-select-option value="france">France</ion-select-option>
+            <ion-select-option value="france">England</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-textarea name="indirizzo" ngModel ></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="fixed">Zipcode</ion-label>
+        <ion-input name="cap" type="text" ngModel></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input name="telefono"  type="tel"  ngModel required maxlength="10"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-item>
+        <ion-label>Privacy</ion-label>
+        <ion-select placeholder="Select One" name="privacy" ngModel>
+          <ion-select-option value="ok">Accept</ion-select-option>
+          <ion-select-option value="notok">Decline</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-item>
+        <ion-label>clausole</ion-label>
+        <ion-select placeholder="Select One" name="clausole" ngModel>
+          <ion-select-option value="ok">Accept</ion-select-option>
+          <ion-select-option value="notok">Decline</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-item>
+        <ion-label>esonero</ion-label>
+        <ion-select placeholder="Select One" name="esonero" ngModel>
+          <ion-select-option value="ok">Accept</ion-select-option>
+          <ion-select-option value="notok">Decline</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-item>
+        <ion-label>lingua</ion-label>
+        <ion-select placeholder="Select One" name="lingua" ngModel>
+          <ion-select-option value="italy">Italy</ion-select-option>
+            <ion-select-option value="france">France</ion-select-option>
+            <ion-select-option value="france">England</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <p style="font-size: 10px; text-align: center;">By signup you are agreeing to tems and service.</p>
+
+      <!-- Icons -->
+<ion-button type="submit">
+  <ion-icon slot="start" name="power"></ion-icon>
+  Signup
+</ion-button>
+</form>
+  </ion-grid>
+  
+</ion-content>
+
